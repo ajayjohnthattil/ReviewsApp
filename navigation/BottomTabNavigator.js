@@ -1,6 +1,6 @@
 import * as React from "react";
 import {createMaterialBottomTabNavigator} from "@react-navigation/material-bottom-tabs";
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from'../screens/ProfileScreen';
@@ -15,46 +15,48 @@ const BottomTabNavigator = () => {
     return(
         <Tab.Navigator 
             initialRouteName ="Home" 
-            activeColor="#e91e63"
-            barStyle={{ backgroundColor: 'tomato' }}
+            
         >
             <Tab.Screen 
                 name="Home"
                 component={HomeScreen}
                 options={{
-                    tabBarLabel: 'Home',
+                    //tabBarLabel: 'Home',
                     tabBarIcon: ({ color }) => (
-                    <MaterialCommunityIcons name="home" color={color} size={26} />
+                        <Ionicons name="home-outline" color={color} size={22}/>
                     ),
                 }}
         />
             <Tab.Screen 
                 name ="Explore" 
+                component={ExploreScreen}
                 options={{
-                    tabBarLabel: 'Explore',
+                    //tabBarLabel: 'Explore',
                     tabBarIcon: ({ color }) => (
-                    <MaterialCommunityIcons name="home" color={color} size={26} />
+                        <Ionicons name="heart-outline" color={color} size={22}/>
                     ),
                 }}
-                component={ExploreScreen}/>
+                />
             <Tab.Screen 
                 name ="Notification" 
+                component={NotificationScreen}
                 options={{
-                    tabBarLabel: 'Notification',
-                    tabBarIcon: ({ color }) => (
-                    <MaterialCommunityIcons name="bell" color={color} size={26} />
-                    ),
+                    //tabBarLabel: 'Notification',
+                   tabBarIcon: ({ color }) => (
+                    <Ionicons name="notifications-outline" color={color} size={22}/>
+                   ),
                 }}
-                component={NotificationScreen}/>
+                />
             <Tab.Screen 
                 name ="Profile" 
+                component={ProfileScreen}
                 options={{
-                    tabBarLabel: 'Profile',
+                    //tabBarLabel: 'Profile',
                     tabBarIcon: ({ color }) => (
-                    <MaterialCommunityIcons name="home" color={color} size={26} />
+                        <Ionicons name="person-outline" color={color} size={22}/>
                     ),
                 }}
-                component={ProfileScreen}/>
+                />
         </Tab.Navigator>
     )
 
