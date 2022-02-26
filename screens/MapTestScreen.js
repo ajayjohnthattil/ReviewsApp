@@ -215,7 +215,7 @@ const mapStandardStyle = [
     ]
   },
 ];
-const HomeScreen = () => {
+const MapTestScreen = () => {
     const theme = useTheme();
 
     const initialMapState = {
@@ -438,7 +438,7 @@ const HomeScreen = () => {
       );
     };
 
-export default HomeScreen;
+export default MapTestScreen;
 
 
 

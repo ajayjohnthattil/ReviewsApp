@@ -6,6 +6,7 @@ import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from'../screens/ProfileScreen';
 import ExploreScreen from '../screens/ExploreScreen';
 import NotificationScreen from '../screens/NotificationScreen';
+import MapTestScreen from "../screens/MapTestScreen";
 
 
 const Tab = createMaterialBottomTabNavigator();
